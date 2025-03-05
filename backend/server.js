@@ -4,6 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const foodRoutes = require("./routes/foodRoutes");
 const authRoutes = require("./routes/authRoutes");
+const orderRoutes = require("./routes/orderRoutes");
 
 // Load env variables
 dotenv.config();
@@ -26,6 +27,7 @@ app.use(cors());
 // Routes
 // use food routes
 app.use('/api',foodRoutes);
+app.use('/api',orderRoutes);
 app.use('/api/users',authRoutes);
 
 
