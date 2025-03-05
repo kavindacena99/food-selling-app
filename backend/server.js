@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const foodRoutes = require("./routes/foodRoutes");
 
 // Load env variables
 dotenv.config();
@@ -20,6 +21,11 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
+// use food routes
+app.use('/api',foodRoutes);
+
+
+// Test route
 app.get("/",()=>{
     res.send("Welcome to the server");
 });
