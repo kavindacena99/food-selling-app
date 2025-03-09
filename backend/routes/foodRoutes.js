@@ -23,7 +23,7 @@ router.post("/food", async (req,res) => {
 });
 
 // get all food items
-router.get("/food",async (req,res)=>{
+router.get("/food",protect,async (req,res)=>{
     try{
         const foods = await Food.find();
         res.status(200).json(foods);

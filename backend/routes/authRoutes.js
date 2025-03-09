@@ -2,6 +2,7 @@ const express = require("express");
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const blacklistedTokens = require("../blacklist");
 
 const router = express.Router();
 
@@ -54,6 +55,25 @@ router.post("/login",async (req,res)=>{
         res.status(500).json({ message: "Server error", error: err.message });
     }
 });
+
+//logout user
+/*
+router.post("/logout",(req,res)=>{
+    const token = req.header('Authorization')?.replace('Bearer ','');
+
+    if(!token){
+        return res.status(400).json({ message:'No token provided' });
+    }
+
+    try{
+        blacklistedTokens.add(token);
+
+        res.status(200).json({ message: "Logout successfully" });
+    }catch(err){
+        res.status(500).json({ message:"server error" });
+    }
+});
+*/
 
 
 module.exports = router;

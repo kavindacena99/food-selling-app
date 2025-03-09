@@ -3,9 +3,20 @@ import { Routes, Route, useNavigate} from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import API from "./services/api";
 
 function App() {
   const navigate = useNavigate();
+
+  const handleLogout = async (e) => {
+    e.preventDefault();
+
+    try{
+      await API.get
+    }catch(err){
+
+    }
+  };
 
   return (
     <div>
