@@ -12,7 +12,7 @@ function Login(){
     const handleLogin = async (e) => {
         e.preventDefault();
         try{
-            const { data } = await API.post("/users/login");
+            const data = await API.post("/users/login",{ email, password });
             localStorage.setItem("token", data.token);
             navigate("/dashboard");
         }catch(err){
