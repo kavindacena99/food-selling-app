@@ -19,6 +19,14 @@ const Dashboard = () => {
 
     return(
         <div>
+            <h1>This is home</h1>
+            <h2>Food menu</h2>
+        </div>
+    );
+
+    /*
+    return(
+        <div>
         <h2>Food Menu</h2>
         <ul>
             {foods.map((food) => (
@@ -31,6 +39,7 @@ const Dashboard = () => {
         </ul>
         </div>
     );
+    */
 };
 
 export default Dashboard;

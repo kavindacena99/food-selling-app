@@ -53,4 +53,4 @@ const authMiddleware = (req, res, next) => {
 */
 
 
-module.exports = { admin, protect /* , authMiddleware */ };
+module.exports = protect;

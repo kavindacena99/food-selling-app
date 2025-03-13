@@ -3,11 +3,13 @@ import { Routes, Route, useNavigate} from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import Navbar from "./components/Navbar";
 import API from "./services/api";
+import "./App.css";
 
 function App() {
-  const navigate = useNavigate();
-
+  //const navigate = useNavigate();
+  /*
   const handleLogout = async (e) => {
     e.preventDefault();
 
@@ -17,18 +19,16 @@ function App() {
 
     }
   };
+  */
 
   return (
     <div>
-      <h1>Hi This is home</h1>
+      <Navbar />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
-
-      <button onClick={()=>navigate("/login")}>Go to Login</button><br />
-      <button onClick={()=>navigate("/register")}>Go to Register</button>
     </div>
   );
 }
