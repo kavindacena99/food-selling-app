@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import API from "../services/api";
+import API from ".../services/api";
 
-function Login(){
+function SellerLogin(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
@@ -56,4 +56,4 @@ function Login(){
     */
 };
 
-export default Login;
+export default SellerLogin;

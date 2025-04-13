@@ -10,8 +10,8 @@ function Navbar(){
                     <li><a href="" className="hover:text-green-200">Products</a></li>
                     <li><a href="" className="hover:text-green-200">Contact</a></li>
                     <li><a href="" className="hover:text-green-200">About</a></li>
-                    <li><a href="/login" className="hover:text-green-200">Login</a></li>
-                    <li><a href="/register" className="hover:text-green-200">Signup</a></li>
+                    <li><a href="/login" className="hover:text-green-200">Seller</a></li>
+                    <li><a href="/register" className="hover:text-green-200">Buyer</a></li>
                 </ul>
             </div>
         </nav>
