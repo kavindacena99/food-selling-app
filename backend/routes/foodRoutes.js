@@ -23,7 +23,7 @@ router.post("/food", async (req,res) => {
 });
 
 // get all food items
-router.get("/food",protect,async (req,res)=>{
+router.get("/food",async (req,res)=>{
     try{
         const foods = await Food.find();
         res.status(200).json(foods);
@@ -31,6 +31,9 @@ router.get("/food",protect,async (req,res)=>{
         res.status(500).json({ message:'Error getting food items'});
     }
 });
+
+/*
+
 
 // get a specific food item
 router.get("/food/:id",async (req,res)=>{
@@ -77,5 +80,7 @@ router.delete("/food/:id",async (req,res)=>{
         res.status(500).json({ message:'Error deleting food item', error:err });
     }
 });
+
+*/
 
 module.exports = router;

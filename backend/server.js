@@ -26,7 +26,7 @@ app.use(cors());
 
 // Routes
 // use food routes
-app.use('/api',foodRoutes);
+app.use('/api/items',foodRoutes);
 app.use('/api',orderRoutes);
 app.use('/api/users',authRoutes);
 

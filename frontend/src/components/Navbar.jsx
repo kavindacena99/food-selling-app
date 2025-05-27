@@ -18,13 +18,4 @@ function Navbar(){
     );
 }
 
-/*
-<a href="/login" className="hover:text-green-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5.828 7a2 2 0 10-2.828-2.828 2 2 0 002.828 2.828z" />
-                    </svg>
-                    <span className="ml-1 align-middle">Login</span>
-                    </a>
-
-*/
 export default Navbar;

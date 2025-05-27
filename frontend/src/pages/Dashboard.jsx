@@ -23,23 +23,6 @@ const Dashboard = () => {
             <h2>Food menu</h2>
         </div>
     );
-
-    /*
-    return(
-        <div>
-        <h2>Food Menu</h2>
-        <ul>
-            {foods.map((food) => (
-            <li key={food._id}>
-                <h3>{food.name}</h3>
-                <p>{food.description}</p>
-                <p>${food.price}</p>
-            </li>
-            ))}
-        </ul>
-        </div>
-    );
-    */
 };
 
 export default Dashboard;
