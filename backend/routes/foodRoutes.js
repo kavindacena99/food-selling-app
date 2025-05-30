@@ -6,14 +6,19 @@ const router = express.Router();
 
 // create a food item
 // protected route : only logged-in users can add food
-// router.post("/food", async (req,res) => {  as router.post("/food",protect, async (req,res) => { 
-router.post("/food", async (req,res) => {
+router.post("/food",protect,async (req,res) => {
     try{
         
-        const { name, description, price, image } = req.body;
+        const { itemname, description, price } = req.body;
 
-        const newFood = new Food({ name, description, price, image});
+        const sellerId = req.user; // Assuming req.user contains the ID of the logged-in user
 
+        if(!sellerId){
+            return res.status(401).json({ message: 'Unauthorized, no seller ID provided' });
+        }
+        
+        // we want to add image
+        const newFood = new Food({ itemname, description, price, seller: sellerId });
 
         const savedFood = await newFood.save();
         res.status(201).json(savedFood);

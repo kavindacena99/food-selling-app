@@ -5,20 +5,9 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Navbar from "./components/Navbar";
 import "./App.css";
+import SellerDashboard from "./pages/seller/SellerDashboard";
 
 function App() {
-  //const navigate = useNavigate();
-  /*
-  const handleLogout = async (e) => {
-    e.preventDefault();
-
-    try{
-      await API.get
-    }catch(err){
-
-    }
-  };
-  */
 
   return (
     <div>
@@ -28,6 +17,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/" element={<Home />} />
+        <Route path="/additem" element={<SellerDashboard />} />
       </Routes>
     </div>
   );
